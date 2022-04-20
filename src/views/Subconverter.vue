@@ -4,10 +4,10 @@
       <el-col>
         <el-card>
           <div slot="header">
-            Subscription Converter
+            <h1>系外企鹅的订阅转换</h1>
             <svg-icon icon-class="github" style="margin-left: 20px" @click="goToProject" />
 
-            <div style="display: inline-block; position:absolute; right: 20px">{{ backendVersion }}</div>
+            <div style="display: inline-block; position:absolute; right: 20px"><a href="#">@系外企鹅</a><a href="https://github.com/tindy2013/subconverter">{{ backendVersion }}</a></div>
           </div>
           <el-container>
             <el-form :model="form" label-width="80px" label-position="left" style="width: 100%">
@@ -115,6 +115,23 @@
                 </el-form-item>
               </div>
 
+              <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
+                <el-button
+                  style="width: 140px;height:70px;font-size:17px;"
+                  type="danger"
+                  @click="makeUrl"
+                  :disabled="form.sourceSubUrl.length === 0"
+                >生成订阅链接</el-button>
+                <el-button
+                  style="width: 140px;height:70px;font-size:17px;"
+                  type="danger"
+                  @click="makeShortUrl"
+                  :loading="loading"
+                  :disabled="customSubUrl.length === 0"
+                >生成短链接</el-button>
+                <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
+              </el-form-item>
+
               <div style="margin-top: 50px"></div>
 
               <el-divider content-position="center">
@@ -142,23 +159,6 @@
                     icon="el-icon-document-copy"
                   >复制</el-button>
                 </el-input>
-              </el-form-item>
-
-              <el-form-item label-width="0px" style="margin-top: 40px; text-align: center">
-                <el-button
-                  style="width: 120px"
-                  type="danger"
-                  @click="makeUrl"
-                  :disabled="form.sourceSubUrl.length === 0"
-                >生成订阅链接</el-button>
-                <el-button
-                  style="width: 120px"
-                  type="danger"
-                  @click="makeShortUrl"
-                  :loading="loading"
-                  :disabled="customSubUrl.length === 0"
-                >生成短链接</el-button>
-                <!-- <el-button style="width: 120px" type="primary" @click="surgeInstall" icon="el-icon-connection">一键导入Surge</el-button> -->
               </el-form-item>
 
               <el-form-item label-width="0px" style="text-align: center">
@@ -255,7 +255,23 @@ export default {
           ClashR: "clashr",
           Surge2: "surge&ver=2",
         },
-        backendOptions: [{ value: "http://127.0.0.1:25500/sub?" }],
+        customBackend: {
+          "localhost:25500 本地订阅转换": "http://localhost:25500/sub?",
+          "系外企鹅的订阅转换-后端(推荐)": "https://trsub.tk/sub?",
+          "subcon.dlj.tf(subconverter作者提供-稳定)":
+            "https://subcon.dlj.tf/sub?",
+          "api.dler.io(sub作者&lhie1提供-稳定)": "https://api.dler.io/sub?",
+          "api.wcc.best(sub-web作者提供-稳定)": "https://api.wcc.best/sub?",
+          "sub.id9.cc(品云转换)": "https://sub.id9.cc/sub?",
+        },
+        backendOptions: [
+          { value: "http://localhost:25500/sub?" },
+          { value: "https://trsub.tk/sub?" },
+          { value: "https://subcon.dlj.tf/sub?" },
+          { value: "https://api.dler.io/sub?" },
+          { value: "https://api.wcc.best/sub?" },
+          { value: "https://sub.id9.cc/sub?" },
+        ],
         remoteConfig: [
           {
             label: "universal",
