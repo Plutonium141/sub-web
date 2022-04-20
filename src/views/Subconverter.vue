@@ -398,8 +398,9 @@ export default {
     };
   },
   created() {
-    changeFavicon('https://raw.githubusercontent.com/Plutonium141/now-subconverter/master/sub-web/img/icons/favicon-32x32.png');
     document.title = "系外企鹅的订阅转换";
+    let $favicon = document.querySelector('link[rel="icon"]');
+    $favicon.href = 'https://raw.githubusercontent.com/Plutonium141/now-subconverter/master/sub-web/img/icons/favicon-32x32.png';
     this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
