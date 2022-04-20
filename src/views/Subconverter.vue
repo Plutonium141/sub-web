@@ -24,7 +24,7 @@
                   @blur="saveSubUrl"
                 />
               </el-form-item>
-              <el-form-item label="客户端:">
+              <el-form-item label="输出订阅:">
                 <el-select v-model="form.clientType" style="width: 100%">
                   <el-option v-for="(v, k) in options.clientTypes" :key="k" :label="k" :value="v"></el-option>
                 </el-select>
@@ -67,13 +67,13 @@
                     <el-button slot="append" @click="gotoRemoteConfig" icon="el-icon-link">配置示例</el-button>
                   </el-select>
                 </el-form-item>
-                <el-form-item label="Include:">
+                <el-form-item label="保留节点:">
                   <el-input v-model="form.includeRemarks" placeholder="节点名包含的关键字，支持正则" />
                 </el-form-item>
-                <el-form-item label="Exclude:">
+                <el-form-item label="排除节点:">
                   <el-input v-model="form.excludeRemarks" placeholder="节点名不包含的关键字，支持正则" />
                 </el-form-item>
-                <el-form-item label="FileName:">
+                <el-form-item label="新文件名:">
                   <el-input v-model="form.filename" placeholder="返回的订阅文件名" />
                 </el-form-item>
                 <el-form-item label-width="0px">
@@ -236,7 +236,7 @@ export default {
   data() {
     return {
       backendVersion: "",
-      advanced: "1",
+      advanced: "2",
 
       // 是否为 PC 端
       isPC: true,
@@ -398,7 +398,8 @@ export default {
     };
   },
   created() {
-    document.title = "系外企鹅的在线订阅转换";
+    changeFavicon('https://raw.githubusercontent.com/Plutonium141/now-subconverter/master/sub-web/img/icons/favicon-32x32.png');
+    document.title = "系外企鹅的订阅转换";
     this.isPC = this.$getOS().isPc;
 
     // 获取 url cache
@@ -408,6 +409,8 @@ export default {
   },
   mounted() {
     this.form.clientType = "clash";
+    this.form.customBackend = defaultBackend;
+    this.form.remoteConfig = "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini";
     this.notify();
     this.getBackendVersion();
   },
