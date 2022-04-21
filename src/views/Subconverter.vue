@@ -294,17 +294,17 @@ export default {
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
               },
               {
-                label: "ACL4SSR_AdblockPlus +去广告",
+                label: "ACL4SSR_AdblockPlus 标准版+去广告",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
               },
               {
-                label: "ACL4SSR_NoAuto +无自动测速",
+                label: "ACL4SSR_NoAuto 标准版+无自动测速",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
               },
               {
-                label: "ACL4SSR_NoReject +无广告拦截",
+                label: "ACL4SSR_NoReject 标准版+无广告拦截",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
               },
@@ -314,27 +314,27 @@ export default {
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
               },
               {
-                label: "ACL4SSR_Mini_AdblockPlus.ini 精简版+去广告",
+                label: "ACL4SSR_Mini_AdblockPlus 精简版+去广告",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
               },
               {
-                label: "ACL4SSR_Mini_NoAuto.ini 精简版+无自动测速",
+                label: "ACL4SSR_Mini_NoAuto 精简版+无自动测速",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
               },
               {
-                label: "ACL4SSR_Mini_Fallback.ini 精简版+故障转移",
+                label: "ACL4SSR_Mini_Fallback 精简版+故障转移",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
               },
               {
-                label: "ACL4SSR 精简版+自动测速+故障转移+负载均衡",
+                label: "ACL4SSR_Mini 精简版+自动测速+故障转移+负载均衡",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
               },
               {
-                label: "ACL4SSR_Mini_MultiCountry.ini 精简版+多国家",
+                label: "ACL4SSR_Mini_MultiCountry 精简版+多国家",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiCountry.ini"
               },
@@ -344,12 +344,12 @@ export default {
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
               },
               {
-                label: "ACL4SSR全分组+自动测速+故障转移+负载均衡",
+                label: "ACL4SSR_Full 全分组+自动测速+故障转移+负载均衡",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
               },
               {
-                label: "ACL4SSR_Full_NoAuto.ini 全分组+无自动测速",
+                label: "ACL4SSR_Full_NoAuto 全分组+无自动测速",
                 value:
                   "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_NoAuto.ini"
               },
@@ -378,15 +378,15 @@ export default {
                 value: "config/ACL4SSR.ini"
               },
               {
-                label: "ACL4SSR_Mini 本地 精简版",
+                label: "ACL4SSR_Mini 本地精简版",
                 value: "config/ACL4SSR_Mini.ini"
               },
               {
-                label: "ACL4SSR_Mini_NoAuto.ini 本地 精简版+无自动测速",
+                label: "ACL4SSR_Mini_NoAuto 本地精简版+无自动测速",
                 value: "config/ACL4SSR_Mini_NoAuto.ini"
               },
               {
-                label: "ACL4SSR_Mini_Fallback.ini 本地 精简版+故障转移",
+                label: "ACL4SSR_Mini_Fallback 本地精简版+故障转移",
                 value: "config/ACL4SSR_Mini_Fallback.ini"
               },
               {
